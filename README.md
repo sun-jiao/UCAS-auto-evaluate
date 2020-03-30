@@ -5,3 +5,5 @@
 无法测试脚本是否适用于本科生。
 
 亲测字数限制仅有前段检测，无服务器端限制，提交上去之后可以通过审核。
+
+GreasyFork: https://greasyfork.org/zh-CN/scripts/393618-ucas-auto-evaluate
