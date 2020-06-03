@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         UCAS auto evaluate
+// @name         UCAS auto evaluate-中国科学院大学自动评教
 // @namespace    https://github.com/sun-jiao
-// @version      3.0
+// @version      3.2
 // @description  在中国科学院大学评教系统中自动选中“非常符合/非常满意”，并将文本框最小字数改为1个字。
 // @author       Sun Jiao
 // @match        *://jwxk.ucas.ac.cn/evaluate/*
@@ -25,6 +25,14 @@
         text = document.getElementsByName(name);
         if(text.length > 0){
             text[0].setAttribute("minlength","1");
+        }
+    };
+
+    function autofill(name, string){
+        var text;
+        text = document.getElementsByName(name);
+        if(text.length > 0){
+            text[0].value = string;
         }
     };
 
@@ -58,9 +66,29 @@
     setlength("item_145");
     setlength("item_146");
 
-    /*document.getElementsByName("item_14")[0].value = "授课老师风趣幽默而且干货多，能收获很多知识。";
-    document.getElementsByName("item_15")[0].value = "我认为课堂上可以多一些互动交流。";
-    document.getElementsByName("item_16")[0].value = "我平均每周在这门课程上花费4小时。";
-    document.getElementsByName("item_17")[0].value = "在参与这门课之前，我对这个学科领域兴趣一般。";
-    document.getElementsByName("item_18")[0].value = "我每节课都会出勤，签到，回答问题。";*/
+    //为避免不必要的麻烦，请您务必修改自动评价文本。
+
+    var strings = ["授课老师风趣幽默而且干货多，能收获很多知识。",
+                   "我认为课堂上可以多一些互动交流。",
+                   "我平均每周在这门课程上花费4小时。",
+                   "在参与这门课之前，我对这个学科领域兴趣一般。",
+                   "我每节课都会出勤，签到，回答问题。",
+                   "这位老师风趣幽默而且干货多，能收获很多知识。",
+                   "我认为课堂上可以多一些互动交流。"]
+
+    for (i = 0; i <= 4; i++) {
+        autofill("item_" + (i + 14).toString(), strings[i]);
+    }
+
+    setlength("item_43", strings[5]);
+    setlength("item_44", strings[6]);
+
+    for (i = 0; i <= 4; i++) {
+        autofill("item_" + (i + 97).toString(), strings[i]);
+    }
+
+    setlength("item_145", strings[5]);
+    setlength("item_146", strings[6]);
+
+
 })();
