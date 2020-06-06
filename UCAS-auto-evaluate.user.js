@@ -83,15 +83,15 @@
         autofill("item_" + (i + 14).toString(), strings[i]);
     }
 
-    setlength("item_43", strings[5]);
-    setlength("item_44", strings[6]);
+    autofill("item_43", strings[5]);
+    autofill("item_44", strings[6]);
 
     for (i = 0; i <= 4; i++) {
         autofill("item_" + (i + 97).toString(), strings[i]);
     }
 
-    setlength("item_145", strings[5]);
-    setlength("item_146", strings[6]);
+    autofill("item_145", strings[5]);
+    autofill("item_146", strings[6]);
 
 
 })();
