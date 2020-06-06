@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UCAS auto evaluate
 // @namespace    https://github.com/sun-jiao
-// @version      3.3
+// @version      3.5
 // @description  在中国科学院大学评教系统中自动选中“非常符合/非常满意”，并将文本框最小字数改为1个字。
 // @author       Sun Jiao
 // @match        *://jwxk.ucas.ac.cn/evaluate/*
