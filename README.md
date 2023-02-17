@@ -16,4 +16,4 @@
 
 GreasyFork: https://greasyfork.org/zh-CN/scripts/393618-ucas-auto-evaluate
 
-GitHub: https://github.com/sun-jiao/UCAS-auto-evaluate  (欢迎star)
+GitHub: https://github.com/sun-jiao/UCAS-auto-evaluate  
